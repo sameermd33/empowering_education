@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering Education</title>
+    <style>
+        /* Reset and General Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 15vh;
+            box-shadow: 0 5px 7px rgba(240, 245, 249, 0.1);
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            margin-right: auto;
+            color: #ffd700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 200px 0;
+            height: 100vh;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #ffd700;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #000;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-button:hover {
+            background-color: #333;
+            color: #ffd700;
+        }
+
+        /* About Section */
+        .about-section {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.about-card {
+    flex: 1;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.about-card-text {
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+}
+
+.about-card-text p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+
+/* get involved  */
+.get-involved-section {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #ffd700;
+    color: #000;
+
+}
+
+.get-involved-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.get-involved-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.get-involved-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin-left: 400px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.submit-button {
+    background-color: #000;
+    color: #ffd700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #333;
+    color: #ffd700;
+}
+
+.confirmation-message {
+    font-size: 1.2rem;
+    color: #000;
+    margin-top: 20px;
+}
+
+        /* Case Studies Section */
+        .case-studies-section {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+}
+
+.case-studies-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.horizontal-carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.carousel-inner {
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    display: none; /* Hide all items initially */
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.carousel-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffd700;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.case-studies-description {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 0 20px; /* Adding padding for better readability */
+}
+
+
+
+        /* Solutions Section */
+        .solutions-section {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+.solutions-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.solution-item {
+    margin-bottom: 20px;
+}
+
+.solution-button {
+    background-color: #ffd700;
+    color: #000;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+    text-align: left;
+}
+
+.solution-button:hover {
+    background-color: #e6b800;
+}
+
+.solution-content {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.solution-content p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-links {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .footer-links li {
+            margin: 0 10px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <h1 class="logo">Empowering Education</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2 class="hero-title">Empowering Education in India</h2>
+            <p class="hero-description">
+                Welcome to Empowering Education, where we tackle the challenges faced by India's school education system. Join us in exploring solutions and making a difference.
+            </p>
+            <a href="#issues" class="cta-button">Explore the Issues</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="about-title">About Us</h2>
+            <div style="height: 150px;">
+                <p>At Empowering Education, we are dedicated to transforming lives through the power of learning. Our mission is to provide accessible, high-quality educational resources and opportunities that enable individuals to realize their full potential. We believe that education is the cornerstone of a thriving society and that everyone, regardless of their background or circumstances, deserves the chance to succeed. Through innovative programs, personalized support, and a commitment to inclusivity, we strive to create a positive impact in communities around the world. Join us on our journey to empower minds and build a brighter future for all.</p>
+            </div>
+            <div>
+
+                <div class="about-cards">
+                    <div class="about-card">
+                        <img src="img1.jpg" alt="About Us Image" class="about-image">
+                        <div class="about-card-text">
+                            <p>
+                                Empowering Education
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="about-card">
+                        <img src="img2.jpg" alt="About Us Image" class="about-image">
+                        <div class="about-card-text">
+                            <p>
+                                Empowering Students
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="about-card">
+                        <img src="img3.jpg" alt="About Us Image" class="about-image">
+                        <div class="about-card-text">
+                            <p>
+                                Empowering Country
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Get Involved Section -->
+    <section id="get-involved" class="get-involved-section">
+    <div class="container">
+        <h2 class="get-involved-title">Get Involved</h2>
+        <p class="get-involved-description">
+            Join us in our mission to improve school education in India. Fill out the form below to get involved.
+        </p>
+        
+        <form id="get-involved-form" class="get-involved-form" onsubmit="showMessage(event)">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile No.:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+        
+        <p id="confirmation-message" class="confirmation-message" style="display: none;">We will contact you soon.</p>
+    </div>
+</section>
+
+<script>
+    function showMessage(event) {
+        event.preventDefault();
+        document.getElementById('get-involved-form').style.display = 'none';
+        document.getElementById('confirmation-message').style.display = 'block';
+    }
+</script>
+
+<!-- case studies section -->
+<section id="case-studies" class="case-studies-section">
+    <div class="container">
+        <h2 class="case-studies-title">Case Studies</h2>
+
+        <div class="horizontal-carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img4.jpg" alt="Case Study 1" class="carousel-image">
+                    <p class="carousel-text">Case Study 1: Improving Teacher Training</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="img5.jpg" alt="Case Study 2" class="carousel-image">
+                    <p class="carousel-text">Case Study 2: Enhancing Classroom Infrastructure</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="img6.jpg" alt="Case Study 3" class="carousel-image">
+                    <p class="carousel-text">Case Study 3: Providing Digital Resources</p>
+                </div>
+            </div>
+            <button class="carousel-control-prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control-next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <p class="case-studies-description">
+            During the past decade there has been considerable criticism of administrative leadership behavior in schools. Criticism has focused on the hegemony of autocratic forms of leadership as well as on the manipulation inherent in leadership practices that “sell” leader-held conceptions of organization direction and practice to followers. Principals have been exhorted to empower teachers. However, much of the empowerment literature promotes a narrow conception of empowerment; more expansive constructs are long on concept and theory and short on field-based examples of principal behavior that inform practice. This study addresses this criticism by integrating an iteration of a recently developed theoretical empowerment framework with field-based data collected in a case study of one principal.
+        </p>
+    </div>
+</section>
+
+<script>
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.carousel-item');
+        if (index >= slides.length) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = slides.length - 1;
+        } else {
+            currentIndex = index;
+        }
+        slides.forEach((slide, i) => {
+            slide.style.display = i === currentIndex ? 'block' : 'none';
+        });
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        showSlide(currentIndex);
+    });
+</script>
+
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions-section">
+        <div class="container">
+            <h2 class="solutions-title">Solutions</h2>
+    
+            <div class="solution-item">
+                <button class="solution-button" onclick="toggleSolution('solution1')">Solution 1: Improving Teacher Training</button>
+                <div id="solution1" class="solution-content">
+                    <p>Provide comprehensive training programs for teachers to enhance their teaching skills and keep them updated with the latest educational practices.</p>
+                </div>
+            </div>
+    
+            <div class="solution-item">
+                <button class="solution-button" onclick="toggleSolution('solution2')">Solution 2: Enhancing Classroom Infrastructure</button>
+                <div id="solution2" class="solution-content">
+                    <p>Invest in modern classroom infrastructure, including digital boards, better seating arrangements, and adequate lighting to create a conducive learning environment.</p>
+                </div>
+            </div>
+    
+            <div class="solution-item">
+                <button class="solution-button" onclick="toggleSolution('solution3')">Solution 3: Providing Digital Resources</button>
+                <div id="solution3" class="solution-content">
+                    <p>Ensure the availability of digital learning resources such as e-books, online courses, and interactive learning platforms to support students' education.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function toggleSolution(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Empowering Education. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
